@@ -1,27 +1,36 @@
 <div class="exchange_box">
-  <div class="card mx-auto">
+  <div class="card auto-max">
     <div class="card-body">
       <img class="card-img-top logo-box img-fluid" src="/logo.png" alt="Card image cap">
       <div class="card-block">
         <%= form_tag("/exchange", method: "post", id: "exchange_form") do %>
-          <div class="local_currency">
-            <div class="form-group">
-              <label for="currency">Moeda local</label>
+          <div class="form-row no-gutters align-items-end">
+            <div class="form-group col-md-5">
+              <label for="currency">Local</label>
               <%= select_tag "currency", options_for_select(currency_select, "BRL"), class: "form-control", id: "currency" %>
             </div>
-            <div class="form-group">
-              <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Quantidade ($10)" step="any" required>
+
+            <div class="form-group col-md-2 ">
+              <div class="row justify-content-center align-items-center">
+              <a href="#" ><i class="fa fa-retweet fa-lg" aria-hidden="true" style="margin-bottom: 10px"></i></a>
+              </div>
             </div>
-          </div>
-          <div class="destination_currency">
-            <div class="form-group">
-              <label for="currency_destination">Moeda pretendida</label>
+
+            <div class="form-group col-md-5">
+              <label for="currency_destination">Pretendida</label>
               <%= select_tag "currency_destination", options_for_select(currency_select, "EUR"), class: "form-control", id: "currency_destination"%>
             </div>
-            <div class="form-group">
-              <input type="text" id="result" name="result" class="form-control" placeholder="Resultado" readonly>
-            </div>
+          </div>  
+          <div class="form-group">
+            <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Quantidade ($10)" step="any" required>
           </div>
+
+          <div class="form-group">
+            <input type="text" id="result" name="result" class="form-control" placeholder="Resultado" readonly>
+           <!-- <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+            <span class="sr-only">Loading...</span>-->
+          </div>
+
           <div>
             <button type="submit" class="btn btn-info btn-exchange col-md-12">CONVERTER</button>
           </div>
