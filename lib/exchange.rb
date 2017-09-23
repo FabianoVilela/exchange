@@ -8,7 +8,9 @@ module Currency
       value = JSON.parse(res.body)['rates'][currency_destination]
       return (value * quantity).round(2)
     rescue
-      return 'Problema na conversão'
+      return '0.00 <script>$("#alerts").html(
+        \'<div class="text-danger">Problema na conversão</div><script>\'
+      )'.html_safe
     end
   end
 end
