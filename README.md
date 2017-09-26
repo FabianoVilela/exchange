@@ -15,7 +15,7 @@ Our main goal is to build a wepapp to pratice to connect to [Fixer.io](http://fi
 
 It'll be a webapp where we can simulate currency exchange.
 
-![Sample image](http://https://github.com/FabianoVilela/exchange/blob/master/sample.jpg)
+![Sample image](https://i.imgur.com/w6Uo7da.jpg)
 
 We are an open source project.
 

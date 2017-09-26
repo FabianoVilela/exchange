@@ -1,6 +1,7 @@
 /.bundle
 /log/*
 /tmp/*
+/public/assets
 !/log/.keep
 !/tmp/.keep
 /node_modules
