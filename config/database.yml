@@ -6,8 +6,10 @@ default: &default
   user: postgres  
 
 development:
-  <<: *default
-  database: app_development
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  database: db/development.sqlite3
 
 test:
   <<: *default
