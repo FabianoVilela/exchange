@@ -3,7 +3,7 @@
 
 ## An APP about Currency exchange
 
-Our main goal is to build a wepapp to pratice to connect to [Fixer.io](http://fixer.io/) API, Deployment Heroku, Continuous Integration and TDD.
+Our main goal is to build a wepapp to pratice to connect to [Currency Data Feed](https://currencydatafeed.com) API, Deployment Heroku, Continuous Integration and TDD.
 
 ## Features
 * Selection of currencies from a dropdown
