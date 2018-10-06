@@ -50,3 +50,4 @@ gem 'jquery-rails'
 gem 'popper_js', '~> 1.14.3'
 gem 'bootstrap', '~> 4.1.3'
 gem 'rest-client'
+gem 'mini_racer', platforms: :ruby
