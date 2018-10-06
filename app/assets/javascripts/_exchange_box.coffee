@@ -25,13 +25,15 @@ invertCurrency = (current, destination) ->
     exchange(destination, current)
 
 exchange = (currency = $("#currency").val(), currency_destination = $("#currency_destination").val()) ->
-  $.ajax '/exchange',
-    type: 'POST'
+  amount = $("#quantity").val()
+  if amount > 0
+    $.ajax '/exchange',
+    type: 'GET'
     dataType: 'json'
     data: {
       currency: currency,
       currency_destination: currency_destination,
-      quantity: $("#quantity").val()
+      quantity: amount
     }
     beforeSend: ->
       $('#alerts').html(
@@ -41,5 +43,5 @@ exchange = (currency = $("#currency").val(), currency_destination = $("#currency
       alert textStatus
     success: (data, text, jqXHR) ->
       $('#alerts').html('')
-      $('#result').html(data.value)
+      $('#result').html(data.value.toFixed(2))
   return false;

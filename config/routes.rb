@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root 'home#index'
-  post 'exchange', to: 'home#exchange'
+  get 'exchange', to: 'home#exchange'
 end
